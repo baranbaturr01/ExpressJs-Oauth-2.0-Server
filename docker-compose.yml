@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  mongodb:
+    container_name: Oauth_mongodb-nodejs
+    image: mongo:4
+    volumes:
+      - oauth_db:/data/db
+    ports:
+      - 30022:27017
+    environment:
+      MONGO_SU_USERNAME:
+      MONGO_USERNAME:
+      MONGO_DATABASE:
+      SECRET_NAME:
+
+volumes:
+  oauth_db:
